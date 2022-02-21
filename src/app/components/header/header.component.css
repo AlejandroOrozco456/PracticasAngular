@@ -1,6 +1,6 @@
 *{padding: 0; margin: 0; box-sizing: border-box;}
 body{height: 900px;}
-footer {
+header {
 	background: url('../../../../images/bass.jpg');
 	text-align: center;
 	width: 100%;
@@ -9,9 +9,9 @@ footer {
 	background-attachment: fixed;
 	position: relative;
 	overflow: hidden;
-	border-radius: 85% 85% 0 0 / 30%;
+	border-radius: 0 0 85% 85% / 30%;
 }
-footer .overlay{
+header .overlay{
 	width: 100%;
 	height: 100%;
 	padding: 50px;
