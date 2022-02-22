@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from '../components/home/home.component';
 import { Router, RouterModule, Routes } from '@angular/router';
-import { FooterComponent } from '../components/footer/footer.component';
+import { HomeComponent } from '../components/home/home.component';
+import { InformacionComponent } from '../components/informacion/informacion.component';
 import { ContactoComponent } from '../components/contacto/contacto.component';
+import { SongComponent } from '../components/song/song.component';
+import { AgendaComponent } from '../components/agenda/agenda.component';
 
 const routes : Routes = [
   {
@@ -11,15 +13,24 @@ const routes : Routes = [
     component:HomeComponent
   },
   {
-    path:'',
-    component:HomeComponent
+    path:'informacion',
+    component:InformacionComponent
   },
   {
     path:'contacto',
-    component:HomeComponent
+    component:ContactoComponent
+  },
+  {
+    path:'song',
+    component:SongComponent
+  },
+  {
+    path:'agenda',
+    component:AgendaComponent
   }
 
 ]
+
 
 
 @NgModule({
