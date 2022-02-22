@@ -6,6 +6,7 @@ import { InformacionComponent } from '../components/informacion/informacion.comp
 import { ContactoComponent } from '../components/contacto/contacto.component';
 import { SongComponent } from '../components/song/song.component';
 import { AgendaComponent } from '../components/agenda/agenda.component';
+import { ListadoComponent } from '../components/listado/listado.component';
 
 const routes : Routes = [
   {
@@ -27,6 +28,10 @@ const routes : Routes = [
   {
     path:'agenda',
     component:AgendaComponent
+  },
+  {
+    path:'mensajes',
+    component:ListadoComponent
   }
 
 ]
