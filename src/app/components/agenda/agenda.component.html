@@ -4,32 +4,37 @@
     <div class="col"></div>
     <div class="col-4">
         <br><br>
-        <h3>Por favor Dejame un mensaje</h3>
+        <h3>Yo soy integrante y subrepresentante del grupo Musical Voz de Angel. Aparta la fecha para tu evento.</h3>
         <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
             <div class="form-floating mb-3">
-              <input id="name" type="text" class="form-control" formControlName="nombre">
-              <label for="name">
-                Nombre
+              <input id="fechaH" type="datetime-local" class="form-control" formControlName="fechaH">
+              <label for="fechaH">
+                Fecha
               </label>
             </div>
           
             <div class="form-floating mb-3">
-              <input id="email" type="email" class="form-control" formControlName="email">
-              <label for="address">
-                Correo
+                <select id="paquete" type="text" formControlName="paquete"class="form-select form-select-sm form-control" aria-label=".form-select-sm example">
+                    <option selected>Selecciona el paquete</option>
+                    <option value="1">Grande</option>
+                    <option value="2">Mediano</option>
+                    <option value="3">Chico</option>
+                  </select>
+              <label for="paquete">
+                Paquete
               </label>
             </div>
     
             <div class="form-floating mb-3">
-                <input id="asunto" type="text" class="form-control" formControlName="asunto">
-                <label for="asunto">
-                    Asunto
+                <input id="lugar" type="text" class="form-control" formControlName="lugar">
+                <label for="lugar">
+                    Lugar
                 </label>
               </div>
               <div class="form-floating mb-3">
-                <textarea class="form-control" formControlName="descripcion" style="height: 100px"></textarea>
-                <label for="descripcion">
-                    Descripcion
+                <input id="horas" type="number" class="form-control" formControlName="horas">
+                <label for="horas">
+                    Cantidad de horas
                 </label>
               </div>
           
@@ -50,23 +55,22 @@
         <table class="table table-dark table-striped">
             <thead>
               <tr>
-                <th scope="col">Nombre</th>
-                <th scope="col">Email</th>
-                <th scope="col">Asunto</th>
-                <th scope="col">Descripcion</th>
+                <th scope="col">Fecha/Hora</th>
+                <th scope="col">Paquete</th>
+                <th scope="col">Lugar</th>
+                <th scope="col">Cant. Horas</th>
               </tr>
             </thead>
-            <tbody *ngFor="let usuario of usuarios">
+            <tbody *ngFor="let contrato of contratos">
               <tr>
-                <th scope="row">{{usuario.nombre}}</th>
-                <td>{{usuario.email}}</td>
-                <td>{{usuario.asunto}}</td>
-                <td>{{usuario.descripcion}}</td>
+                <th scope="row">{{contrato.fechaH}}</th>
+                <td>{{contrato.paquete}}</td>
+                <td>{{contrato.lugar}}</td>
+                <td>{{contrato.horas}}</td>
               </tr>
             </tbody>
           </table>
     </div>
     <div class="col"></div>
 </div>
-
 <app-footer></app-footer>
