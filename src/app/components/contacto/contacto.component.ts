@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Usuario } from 'src/app/interface/usuario';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-contacto',
@@ -16,7 +17,7 @@ export class ContactoComponent implements OnInit {
   });
   usuarios : Usuario[]=[];
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private UsuarioService:UsuarioService) { }
 
   ngOnInit(): void {
     
@@ -29,8 +30,8 @@ export class ContactoComponent implements OnInit {
       descripcion:this.formulario.get('descripcion')?.value, 
   }
 
-  this.usuarios.push(nuevoUser);
-  console.log(this.usuarios)
+  this.UsuarioService.addUser(nuevoUser);
+  this.usuarios=this.UsuarioService.getAll();
     this.limpiarForm();
   }
   limpiarForm(){
