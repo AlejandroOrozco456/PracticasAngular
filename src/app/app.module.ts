@@ -13,6 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SongComponent } from './components/song/song.component';
 import { AgendaComponent } from './components/agenda/agenda.component';
 import { ListadoComponent } from './components/listado/listado.component';
+import { InstrumentoComponent } from './components/instrumento/instrumento.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,13 +27,15 @@ import { ListadoComponent } from './components/listado/listado.component';
     ContactoComponent,
     SongComponent,
     AgendaComponent,
-    ListadoComponent
+    ListadoComponent,
+    InstrumentoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
